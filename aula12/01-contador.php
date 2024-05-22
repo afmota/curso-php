@@ -8,7 +8,13 @@
 </head>
 <body>
 	<div>
-		<form action="" method="get"></form>
-	</div>
+        <?php
+			$c = 1;
+			do {
+				echo $c . " ";
+				$c += 2;
+			} while ($c <=120);
+        ?>
+    </div>
 </body>
 </html>

@@ -8,7 +8,15 @@
 </head>
 <body>
 	<div>
-		<form action="" method="get"></form>
-	</div>
+        <?php
+            $v = isset($_GET["val"]) ? $_GET["val"] : 1;
+
+            $c = $v;
+            $fat = 1;
+            do {
+                $fat = $fat * $c;
+            } while ($c >= 1);
+        ?>
+    </div>
 </body>
 </html>
