@@ -15,26 +15,27 @@
 
 			$dif = abs($end - $start);
 			if ($dif < $step) {
-				echo "A diferença entre INÍCIO e FIM não pode ser menor que o INCREMENTO. <br><br>";
+				echo "A diferença entre INÍCIO e FIM não pode ser menor ou igual que o INCREMENTO. <br><br>";
 				echo "<span class='botao'>
-					<a href='03-contador.html'>Voltar</a>
+					<a href='03-contador.html' class='botao'>Voltar</a>
 				</span>";
-			}
-
-			if ($start < $end) {
-				while ($start <= $end) {
-					echo $start . '  ';
-					$start += $step;
-				}
-			}
-
-			if ($start > $end) {
-				while ($start >= $end) {
-					echo $start . '  ';
-					$start -= $step;
-				}
-			}
+			} else {
+                if ($start < $end) {
+                    while ($start <= $end) {
+                        echo $start . '  ';
+                        $start += $step;
+                    }
+                } else {
+                    if ($start > $end) {
+                        while ($start >= $end) {
+                            echo $start . '  ';
+                            $start -= $step;
+                        }
+                    }
+                }
+            }
         ?>
+        <p><a href="03-contador.html" class="botao">Voltar</a></p>
     </div>
 </body>
 </html>
